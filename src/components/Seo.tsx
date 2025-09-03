@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet";
 import favIcon from '../../public/favicon.png'
 
 const Seo = ({
-  title = "Kanchan Basnet | Software Engineer",
+  title = "Kanchan Basnet",
   description = "Backend developer skilled in Node.js, React.js, and TypeScript. Building reliable and efficient applications with clean, maintainable code.",
   keywords = "Kanchan Basnet, Software Engineer, Node.js, React.js, TypeScript, Backend Developer, Portfolio",
   ogImage = favIcon,
