@@ -8,7 +8,7 @@ const BlogsPage = () => {
   return (
     <div className="min-h-screen bg-black">
        <Seo
-        title="Blogs | Kanchan Basnet"
+        title="Kanchan Basnet"
         description="A collection of articles where I share insights on programming, web development, and technology trends."
         pathName="blogs"
       />

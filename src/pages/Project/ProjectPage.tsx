@@ -24,7 +24,7 @@ const ProjectPage = () => {
   return (
     <div className="min-h-screen bg-black">
        <Seo
-        title="Projects | Kanchan Basnet"
+        title="Kanchan Basnet"
         description="A collection of projects showcasing my work in generative AI and web development."
         pathName="projects"
       />
