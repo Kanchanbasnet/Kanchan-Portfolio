@@ -20,7 +20,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Seo
-        title="Kanchan Basnet | Software Engineer | Portfolio"
+        title="Kanchan Basnet"
         description="Backend developer skilled in Node.js, React.js, and TypeScript. Building reliable and efficient applications with clean, maintainable code."
         pathName=""
       />
