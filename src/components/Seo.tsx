@@ -1,11 +1,10 @@
 import { Helmet } from "react-helmet";
-import favIcon from '../../public/favicon.png'
 
 const Seo = ({
   title = "Kanchan Basnet",
   description = "Backend developer skilled in Node.js, React.js, and TypeScript. Building reliable and efficient applications with clean, maintainable code.",
   keywords = "Kanchan Basnet, Software Engineer, Node.js, React.js, TypeScript, Backend Developer, Portfolio",
-  ogImage = favIcon,
+  ogImage = "https://www.kanchanbasnet.com.np/default-favicon.png",
   ogUrl = "https://www.kanchanbasnet.com.np/",
   pathName = "",
 }) => {
@@ -16,7 +15,7 @@ const Seo = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      
+      <link rel="icon" type="image/png" href="/default-favicon.png" sizes="16x16"/>
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={url} />

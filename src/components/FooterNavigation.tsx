@@ -15,7 +15,7 @@ const HeaderNavigation = () => {
     { name: "About", icon: User, path: "/about" },
     { name: "Projects", icon: Network, path: "/projects" },
     { name: "Blogs", icon: BookOpen, path: "/blogs" },
-    { name: "Contact", icon: Mail, path: "mailto:kanchanbasnet5@gmail.com" },
+    { name: "Contact", icon: Mail, path: "mailto:kanchanbasnet.dev@gmail.com" },
   ]
 
   const handleNavigation = (path: string) => {

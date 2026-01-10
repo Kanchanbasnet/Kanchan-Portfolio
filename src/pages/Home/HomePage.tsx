@@ -81,7 +81,7 @@ const HomePage = () => {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
             >
-              <a href="mailto:kanchanbasnet5@gmail.com" className="block w-full h-full text-sm sm:text-base">
+              <a href="mailto:kanchanbasnet.dev@gmail.com" className="block w-full h-full text-sm sm:text-base">
                 Get in Touch
               </a>
             </motion.div>
