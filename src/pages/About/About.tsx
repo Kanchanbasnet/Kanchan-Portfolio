@@ -89,13 +89,7 @@ const About = () => {
       transition: { type: 'spring', stiffness: 100 },
     },
   };
-  const profile = `A skilled Node.js developer with over 1.5 years of experience
-          specializing in backend development using Node.js, React, MongoDB, and
-          PostgreSQL. Proven ability to design, build, and maintain scalable web
-          applications with a focus on performance and efficiency. Passionate
-          about solving complex tasks and continuously enhancing technical
-          skills. Adept at collaborating in team environments and delivering
-          high-quality projects within deadlines.`;
+  const profile = `Backend Engineering is about more than just data—it’s about stability. With 2.3 years of experience in the Node.js stack, I specialize in solving the 'invisible' problems that define a project's success. From optimizing PostgreSQL queries to architecting scalable services, I am passionate about creating the technical foundations that allow users and businesses to thrive.`;
 
   return (
     <div>
@@ -179,7 +173,7 @@ const About = () => {
             onClick={() => {
               const link = document.createElement("a");
               link.href = resume;
-              link.download = "Kanchan_Basnet_Resume.pdf"; 
+              link.download = "Kanchan_Basnet_Resume.pdf";
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);

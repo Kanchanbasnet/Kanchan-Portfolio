@@ -1,105 +1,49 @@
-
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import FooterNavigation from "../../components/FooterNavigation"
-import Footer from "../../components/Footer"
+import { motion } from "framer-motion"
+import HeaderNavigation from "../../components/FooterNavigation"
 import Seo from "../../components/Seo"
+import OpenToWork from "../../components/OpenToWork"
+import ScrollDown from "../../components/ScrollDown"
 
 const HomePage = () => {
-  const roles = ["Kanchan Basnet", "Software Engineer", "Learner"]
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length)
-    }, 3000)
-
-    return () => clearInterval(interval)
-  }, [])
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-[#09090b] text-white flex flex-col relative overflow-hidden font-['Inter']">
       <Seo
         title="Kanchan Basnet"
         description="Backend developer skilled in Node.js, React.js, and TypeScript. Building reliable and efficient applications with clean, maintainable code."
         pathName=""
       />
-      <motion.div
-        className="p-4 sm:p-6 flex-grow flex flex-col justify-center items-center"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2 }}
-      >
+
+      {/* Top Navigation */}
+      <HeaderNavigation />
+
+      {/* Main Content */}
+      <main className="flex-grow flex items-center justify-start px-10 sm:px-20">
         <motion.div
-          className="w-full max-w-6xl px-4 sm:px-6 flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-8"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.5, ease: "easeOut" }}
+          className="text-left flex flex-col items-start gap-0"
         >
-          <div className="w-full max-w-xl text-center">
-            <motion.p
-              className="text-lg sm:text-xl mb-2 text-white"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-            >
-              Hello! I am
-            </motion.p>
-            <div className="h-12 sm:h-16 mb-3 sm:mb-4 overflow-hidden">
-              <AnimatePresence mode="wait">
-                <motion.h1
-                  key={currentRoleIndex}
-                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white"
-                  initial={{ y: 40, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: -40, opacity: 0 }}
-                  transition={{
-                    duration: 0.5,
-                    ease: "easeInOut",
-                  }}
-                >
-                  {roles[currentRoleIndex]}
-                </motion.h1>
-              </AnimatePresence>
-            </div>
-            <motion.p
-              className="text-sm sm:text-base text-gray-300 leading-relaxed px-2 sm:px-0"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-            >
-              Backend developer skilled in Node.js, React.js, and TypeScript. I enjoy building reliable and efficient
-              applications, focusing on clean and maintainable code. I love tackling challenges and constantly learning
-              to improve my skills. Passionate about exploring new techniques and turning ideas into practical
-              solutions.
-            </motion.p>
-            <motion.div
-              className="mt-4 sm:mt-5 mx-auto p-2 w-full max-w-[12rem] border rounded-md bg-white text-black hover:bg-transparent hover:text-white border-gray-500 transition-colors duration-200 cursor-pointer"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.9 }}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <a href="mailto:kanchanbasnet.dev@gmail.com" className="block w-full h-full text-sm sm:text-base">
-                Get in Touch
-              </a>
-            </motion.div>
-          </div>
+          <h1 className="text-7xl sm:text-8xl md:text-[10rem] font-bold tracking-[0.02em] leading-[0.8] select-none uppercase">
+            Backend
+          </h1>
+          <h1 className="text-7xl sm:text-8xl md:text-[10rem] font-bold tracking-[0.02em] leading-[0.8] select-none uppercase ml-10 sm:ml-22 mt-4">
+            Developer
+          </h1>
         </motion.div>
-        <motion.div
-          className="mt-6 sm:mt-8 w-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
-        >
-          <FooterNavigation />
-        </motion.div>
-      </motion.div>
-      <Footer />
+      </main>
+
+      {/* Bottom Layout */}
+      <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10 flex items-end justify-between pointer-events-none">
+        <div className="pointer-events-auto">
+          <ScrollDown />
+        </div>
+        <div className="pointer-events-auto text-right">
+          <OpenToWork />
+        </div>
+      </div>
     </div>
   )
 }
 
 export default HomePage
-

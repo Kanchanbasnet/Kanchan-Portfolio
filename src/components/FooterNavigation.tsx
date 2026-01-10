@@ -38,10 +38,12 @@ const HeaderNavigation = () => {
 
   return (
     <>
-      <header className="fixed top-6 left-0 right-0 flex justify-center z-50 px-4 md:px-0 hidden md:flex">
+
+
+      <header className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col items-center z-50 px-4 md:px-0 hidden md:flex">
         <TooltipProvider>
           <motion.div
-            className="flex items-center space-x-6 bg-[#1c1c1c] rounded-full px-4 py-2 shadow-lg border border-[#2a2a2a]"
+            className="flex flex-col items-center space-y-6 bg-[#1c1c1c] rounded-full px-2 py-4 shadow-lg border border-[#2a2a2a]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 1 }}
@@ -71,7 +73,7 @@ const HeaderNavigation = () => {
                     <item.icon className="h-6 w-6" />
                   </motion.div>
                 </TooltipTrigger>
-                <TooltipContent side="bottom">
+                <TooltipContent side="left">
                   <p>{item.name}</p>
                 </TooltipContent>
               </Tooltip>
@@ -124,7 +126,7 @@ const HeaderNavigation = () => {
         )}
       </AnimatePresence>
 
-     
+
 
       <AnimatePresence>
         {isNavigating && (
