@@ -41,12 +41,12 @@ const HeaderNavigation = () => {
 
       {/* Top-left name wordmark */}
       <motion.div
-        className="fixed top-6 left-8 z-50 hidden md:block"
+        className="fixed top-5 left-5 sm:top-6 sm:left-8 z-50"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 1 }}
       >
-        <span className="text-base font-bold tracking-widest uppercase select-none text-white">
+        <span className="text-xs sm:text-sm md:text-base font-bold tracking-widest uppercase select-none text-white">
           Kanchan Basnet
         </span>
       </motion.div>

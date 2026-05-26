@@ -12,32 +12,32 @@ export default function ProfessionalSummary() {
       <div className="grid grid-cols-3 divide-x divide-gray-800">
         <button
           onClick={() => setActiveTab("about")}
-          className={`flex items-center justify-center gap-2 py-3 px-4 transition-colors cursor-pointer 
+          className={`flex items-center justify-center gap-2 py-3 px-2 sm:px-4 transition-colors cursor-pointer
             ${activeTab === "about" ? "text-white bg-[#1c1c1c]" : "text-gray-400 hover:text-gray-300"}
           `}
         >
-          <FileText className="w-5 h-5" />
-          <span className="font-medium">About</span>
+          <FileText className="w-5 h-5 shrink-0" />
+          <span className="font-medium hidden sm:inline">About</span>
         </button>
 
         <button
           onClick={() => setActiveTab("experience")}
-          className={`flex items-center justify-center gap-2 py-3 px-4 transition-colors cursor-pointer 
+          className={`flex items-center justify-center gap-2 py-3 px-2 sm:px-4 transition-colors cursor-pointer
             ${activeTab === "experience" ? "text-white bg-[#1c1c1c]" : "text-gray-400 hover:text-gray-300"}
           `}
         >
-          <Building2 className="w-5 h-5" />
-          <span className="font-medium">Experience</span>
+          <Building2 className="w-5 h-5 shrink-0" />
+          <span className="font-medium hidden sm:inline">Experience</span>
         </button>
 
         <button
           onClick={() => setActiveTab("education")}
-          className={`flex items-center justify-center gap-2 py-3 px-4 transition-colors cursor-pointer 
+          className={`flex items-center justify-center gap-2 py-3 px-2 sm:px-4 transition-colors cursor-pointer
             ${activeTab === "education" ? "text-white bg-[#1c1c1c]" : "text-gray-400 hover:text-gray-300"}
           `}
         >
-          <GraduationCap className="w-5 h-5" />
-          <span className="font-medium">Education</span>
+          <GraduationCap className="w-5 h-5 shrink-0" />
+          <span className="font-medium hidden sm:inline">Education</span>
         </button>
       </div>
 

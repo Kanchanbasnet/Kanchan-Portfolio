@@ -66,9 +66,9 @@ const Education = () => {
           <div className="absolute w-3 h-3 bg-white rounded-full -left-[7px] top-2"></div>
           {education.map((edu, index) => (
             <motion.div key={index} variants={item}>
-              <div className="flex justify-between items-center">
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-0.5">
                 <h3 className="text-white font-medium">{edu.degree}</h3>
-                <span className="text-gray-400 text-sm">{edu.graduation}</span>
+                <span className="text-gray-400 text-sm shrink-0">{edu.graduation}</span>
               </div>
               <p className="text-sm text-gray-500">{edu.institution}</p>
               <p className=" text-sm text-gray-500">

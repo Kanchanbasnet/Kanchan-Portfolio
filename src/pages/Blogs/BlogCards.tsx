@@ -48,7 +48,7 @@ const BlogCards = () => {
                 href={blog.blogLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-sm font-medium text-white border border-rounded-md bg-transparent  border-gray-800 cursor-pointer p-2 w-36 hover:bg-[#1c1c1c]"
+                className="inline-flex items-center text-sm font-medium text-white rounded-md border border-gray-800 bg-transparent cursor-pointer p-2 w-36 hover:bg-[#1c1c1c]"
               >
                 View Blog
                 <ArrowUpRight className="ml-1 w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

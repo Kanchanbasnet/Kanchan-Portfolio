@@ -14,7 +14,7 @@ export default function About() {
         description="Backend developer skilled in Node.js, React.js, and TypeScript. Building reliable and efficient applications with clean, maintainable code."
         pathName="about"
       />
-      <div className="min-h-screen text-white px-4 py-6 pb-20">
+      <div className="min-h-screen text-white px-4 py-6 pb-20 md:pr-24 lg:pr-8">
         <HeaderNavigation />
 
         <div className="max-w-4xl mx-auto space-y-10 mt-20">

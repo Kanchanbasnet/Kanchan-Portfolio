@@ -70,11 +70,11 @@ const Experience = () => {
               className="absolute w-3 h-3 bg-white rounded-full -left-[7px] top-1.5"
               variants={item}
             ></motion.div>
-            <div className="flex justify-between items-start mb-2">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 gap-0.5">
               <motion.h3 className="text-lg font-bold" variants={item}>
                 {exp.title}
               </motion.h3>
-              <motion.span className="text-sm text-gray-400" variants={item}>
+              <motion.span className="text-sm text-gray-400 sm:text-right shrink-0" variants={item}>
                 {exp.duration}
               </motion.span>
             </div>

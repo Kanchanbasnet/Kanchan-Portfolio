@@ -17,17 +17,17 @@ const HomePage = () => {
       <HeaderNavigation />
 
       {/* Main Content */}
-      <main className="flex-grow flex items-center justify-start px-10 sm:px-20">
+      <main className="flex-grow flex items-center justify-start px-6 sm:px-10 md:px-16 lg:px-20 pr-6 md:pr-28">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="text-left flex flex-col items-start gap-0"
         >
-          <h1 className="text-7xl sm:text-8xl md:text-[10rem] font-bold tracking-[0.02em] leading-[0.85] select-none uppercase">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[8rem] xl:text-[10rem] font-bold tracking-[0.02em] leading-[0.85] select-none uppercase">
             Software
           </h1>
-          <h1 className="text-7xl sm:text-8xl md:text-[10rem] font-bold tracking-[0.02em] leading-[0.85] select-none uppercase">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-[8rem] xl:text-[10rem] font-bold tracking-[0.02em] leading-[0.85] select-none uppercase">
             Engineer
           </h1>
           <motion.div

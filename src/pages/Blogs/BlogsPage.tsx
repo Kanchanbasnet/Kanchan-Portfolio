@@ -15,7 +15,7 @@ const BlogsPage = () => {
       {/* Top Navigation */}
       <HeaderNavigation />
 
-      <main className="flex-grow flex flex-col px-4 py-24 pb-32 sm:px-6 lg:px-8">
+      <main className="flex-grow flex flex-col px-4 py-24 pb-32 sm:px-6 lg:px-8 md:pr-24 lg:pr-16">
         <motion.section
           className="container mx-auto"
           initial={{ opacity: 0, y: 20 }}
