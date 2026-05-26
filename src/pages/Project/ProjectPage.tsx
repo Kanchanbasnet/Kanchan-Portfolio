@@ -21,9 +21,9 @@ const ProjectPage = () => {
     },
   };
   return (
-    <div className="min-h-screen bg-[#09090b] text-white flex flex-col relative overflow-hidden font-['Inter']">
+    <div className="min-h-screen bg-[#09090b] text-white flex flex-col relative overflow-hidden font-['Outfit']">
       <Seo
-        title="Kanchan Basnet"
+        title="Kanchan Basnet - Software Engineer"
         description="A collection of projects showcasing my work in generative AI and web development."
         pathName="projects"
       />

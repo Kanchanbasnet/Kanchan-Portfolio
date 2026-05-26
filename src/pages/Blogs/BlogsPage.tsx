@@ -5,9 +5,9 @@ import Seo from '../../components/Seo';
 
 const BlogsPage = () => {
   return (
-    <div className="min-h-screen bg-[#09090b] text-white flex flex-col relative overflow-hidden font-['Inter']">
+    <div className="min-h-screen bg-[#09090b] text-white flex flex-col relative overflow-hidden font-['Outfit']">
       <Seo
-        title="Kanchan Basnet"
+        title="Kanchan Basnet - Software Engineer"
         description="A collection of articles where I share insights on programming, web development, and technology trends."
         pathName="blogs"
       />

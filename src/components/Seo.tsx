@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet";
 
 const Seo = ({
-  title = "Kanchan Basnet",
+  title = "Kanchan Basnet - Software Engineer",
   description = "Backend developer skilled in Node.js, React.js, and TypeScript. Building reliable and efficient applications with clean, maintainable code.",
   keywords = "Kanchan Basnet, Software Engineer, Node.js, React.js, TypeScript, Backend Developer, Portfolio",
   ogImage = "https://www.kanchanbasnet.com.np/default-faviconn.png",

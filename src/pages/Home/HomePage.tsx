@@ -6,10 +6,10 @@ import ScrollDown from "../../components/ScrollDown"
 
 const HomePage = () => {
   return (
-    <div className="min-h-screen bg-[#09090b] text-white flex flex-col relative overflow-hidden font-['Inter']">
+    <div className="min-h-screen bg-[#09090b] text-white flex flex-col relative overflow-hidden font-['Outfit']">
       <Seo
-        title="Kanchan Basnet"
-        description="Backend developer skilled in Node.js, React.js, and TypeScript. Building reliable and efficient applications with clean, maintainable code."
+        title="Kanchan Basnet - Software Engineer"
+        description="Software Engineer skilled in Node.js, React.js, and TypeScript. Building reliable and efficient applications with clean, maintainable code."
         pathName=""
       />
 
@@ -24,12 +24,27 @@ const HomePage = () => {
           transition={{ duration: 1.5, ease: "easeOut" }}
           className="text-left flex flex-col items-start gap-0"
         >
-          <h1 className="text-7xl sm:text-8xl md:text-[10rem] font-bold tracking-[0.02em] leading-[0.8] select-none uppercase">
-            Backend
+          <h1 className="text-7xl sm:text-8xl md:text-[10rem] font-bold tracking-[0.02em] leading-[0.85] select-none uppercase">
+            Software
           </h1>
-          <h1 className="text-7xl sm:text-8xl md:text-[10rem] font-bold tracking-[0.02em] leading-[0.8] select-none uppercase ml-10 sm:ml-22 mt-4">
-            Developer
+          <h1 className="text-7xl sm:text-8xl md:text-[10rem] font-bold tracking-[0.02em] leading-[0.85] select-none uppercase">
+            Engineer
           </h1>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1 }}
+            className="mt-8 flex flex-wrap gap-2"
+          >
+            {["Node.js", "TypeScript", "PostgreSQL"].map((tech) => (
+              <span
+                key={tech}
+                className="px-4 py-1.5 rounded-full text-xs font-semibold tracking-widest uppercase font-['Outfit'] bg-white/5 border border-white/10 text-white/60"
+              >
+                {tech}
+              </span>
+            ))}
+          </motion.div>
         </motion.div>
       </main>
 

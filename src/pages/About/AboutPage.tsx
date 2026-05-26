@@ -10,7 +10,7 @@ export default function About() {
   return (
     <div>
       <Seo
-        title="Kanchan Basnet"
+        title="Kanchan Basnet - Software Engineer"
         description="Backend developer skilled in Node.js, React.js, and TypeScript. Building reliable and efficient applications with clean, maintainable code."
         pathName="about"
       />

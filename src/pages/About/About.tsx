@@ -12,7 +12,7 @@ import {
   ReactIcon,
   TypeScriptIcon,
 } from '../../assets/icons/icons';
-import resume from '../../assets/kanchanbasnet.pdf'
+import resume from '../../assets/KanchanBasnetCV.pdf'
 const skills = [
   {
     name: 'Javascript',
@@ -89,7 +89,7 @@ const About = () => {
       transition: { type: 'spring', stiffness: 100 },
     },
   };
-  const profile = `Backend Engineering is about more than just data—it’s about stability. With 2.3 years of experience in the Node.js stack, I specialize in solving the 'invisible' problems that define a project's success. From optimizing PostgreSQL queries to architecting scalable services, I am passionate about creating the technical foundations that allow users and businesses to thrive.`;
+  const profile = `I genuinely enjoy the backend side of things — there’s something satisfying about designing a system that handles load gracefully and is still readable six months later. Most of my time goes into Node.js and TypeScript, thinking through APIs, database schemas, and the kind of edge cases that only show up in production. I’ve been building professionally for about 2.5 years, and what keeps me curious is that every project tends to teach you something the last one didn’t.`;
 
   return (
     <div>

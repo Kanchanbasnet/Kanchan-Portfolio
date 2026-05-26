@@ -6,7 +6,7 @@ const experience = [
     title: 'Associate Software Engineer',
     company: 'Amnil Technologies Pvt. Ltd.',
     location: 'Jhamsikhel, Lalitpur, Nepal',
-    duration: 'December 2023 - Present',
+    duration: 'December 2023 - February 2026',
     techStacks: ['Node.js', 'React.js', 'TypeScript', 'PostgreSQL'],
   },
   {

@@ -2,18 +2,18 @@ import { Card } from '../../components/ui/card';
 import { Badge } from '../../components/ui/badge';
 import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import cellar54 from '../../assets/images/cellar54.png'
+import multimodal from '../../assets/images/MultiModal.png'
 
 const ProjectCards = () => {
   const projects = [
     {
       id: 1,
-      title: 'Cellar54',
-      description: 'A wine website using HTML, CSS, and JavaScript',
-      image: cellar54,
-      githubLink: 'https://github.com/Kanchanbasnet/Cellar54',
-      liveLink: 'https://github.com/Kanchanbasnet/Cellar54',
-      techStack: ['HTML', 'CSS', 'JS'],
+      title: 'Multi Modal Application',
+      description: 'A multi-modal AI chat application where users can interact with OpenAI using text, images, documents, and voice — all in real time. Built as a scalable monorepo backend with Node.js, PostgreSQL, and Google OAuth, designed to handle concurrent conversations reliably.',
+      image: multimodal,
+      githubLink: 'https://github.com/Kanchanbasnet/multi-modal',
+      liveLink: 'https://repoapi-production-6ea4.up.railway.app',
+      techStack: ['NodeJS', 'React', 'TurboRepo', 'PostgreSQL', 'Supabase', 'Redis', 'OpenAI'],
     }
   ];
 
@@ -65,7 +65,7 @@ const ProjectCards = () => {
               </div>
 
               <div className="p-5 flex flex-col flex-grow">
-                <h3 className="text-xl font-bold mb-2 text-white group-hover:text-cyan-400 transition-colors">
+                <h3 className="text-xl font-bold mb-2 text-white transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-zinc-400 text-sm mb-4 flex-grow">
@@ -97,7 +97,7 @@ const ProjectCards = () => {
                     href={project.liveLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center text-sm font-medium text-white border border-rounded-md bg-transparent  border-gray-800 cursor-pointer p-2 w-36 hover:bg-[#1c1c1c]"
+                    className="inline-flex items-center text-sm font-medium text-white border border-gray-800 bg-transparent cursor-pointer p-2 w-36 hover:bg-[#1c1c1c] transition-colors duration-200"
                   >
                     View Project
                     <ArrowUpRight className="ml-1 w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

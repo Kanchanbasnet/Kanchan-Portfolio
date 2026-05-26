@@ -39,6 +39,17 @@ const HeaderNavigation = () => {
   return (
     <>
 
+      {/* Top-left name wordmark */}
+      <motion.div
+        className="fixed top-6 left-8 z-50 hidden md:block"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 1 }}
+      >
+        <span className="text-base font-bold tracking-widest uppercase select-none text-white">
+          Kanchan Basnet
+        </span>
+      </motion.div>
 
       <header className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col items-center z-50 px-4 md:px-0 hidden md:flex">
         <TooltipProvider>
@@ -52,7 +63,7 @@ const HeaderNavigation = () => {
               <Tooltip key={item.name}>
                 <TooltipTrigger asChild>
                   <motion.div
-                    className={`relative p-3 rounded-full flex items-center justify-center cursor-pointer 
+                    className={`relative p-3 rounded-full flex items-center justify-center cursor-pointer
                                 transition-all duration-300 ${location.pathname === item.path ? "text-white" : "text-[#8b8b8b] hover:text-white"}`}
                     onClick={() => handleNavigation(item.path)}
                     whileHover={{ scale: 1.1 }}
