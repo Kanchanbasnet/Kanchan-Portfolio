@@ -1,31 +1,28 @@
 import { useState } from "react"
-import { Home, Network, User, Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../components/ui/tooltip"
 import { useNavigate, useLocation } from "react-router-dom"
+import { Sun, Moon } from "lucide-react"
+import { useTheme } from "../context/ThemeContext"
 
 const HeaderNavigation = () => {
   const navigate = useNavigate()
   const location = useLocation()
+  const { theme, toggleTheme } = useTheme()
   const [isNavigating, setIsNavigating] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const navItems = [
-    { name: "Home", icon: Home, path: "/" },
-    { name: "About", icon: User, path: "/about" },
-    { name: "Projects", icon: Network, path: "/projects" },
+    { name: "HOME", path: "/" },
+    { name: "PROJECTS", path: "/projects" },
   ]
 
   const handleNavigation = (path: string) => {
     if (path.startsWith("mailto:")) {
       window.location.href = path
-      if (mobileMenuOpen) setMobileMenuOpen(false)
       return
     }
 
     if (location.pathname !== path) {
       setIsNavigating(true)
-      if (mobileMenuOpen) setMobileMenuOpen(false)
 
       setTimeout(() => {
         navigate(path)
@@ -36,111 +33,74 @@ const HeaderNavigation = () => {
 
   return (
     <>
-
-      {/* Top-left name wordmark */}
       <motion.div
-        className="fixed top-5 left-5 sm:top-6 sm:left-8 z-50"
+        className="fixed top-5 left-5 sm:top-6 sm:left-8 z-50 cursor-pointer"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        onClick={() => handleNavigation("/")}
       >
-        <span className="text-xs sm:text-sm md:text-base font-bold tracking-widest uppercase select-none text-white">
+        <span className="text-xs sm:text-sm md:text-base font-bold tracking-widest uppercase select-none text-zinc-900 dark:text-white transition-colors duration-200">
           Kanchan Basnet
         </span>
       </motion.div>
 
-      <header className="fixed right-6 top-1/2 -translate-y-1/2 flex flex-col items-center z-50 px-4 md:px-0 hidden md:flex">
-        <TooltipProvider>
-          <motion.div
-            className="flex flex-col items-center space-y-6 bg-[#1c1c1c] rounded-full px-2 py-4 shadow-lg border border-[#2a2a2a]"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 1 }}
-          >
-            {navItems.map((item) => (
-              <Tooltip key={item.name}>
-                <TooltipTrigger asChild>
-                  <motion.div
-                    className={`relative p-3 rounded-full flex items-center justify-center cursor-pointer
-                                transition-all duration-300 ${location.pathname === item.path ? "text-white" : "text-[#8b8b8b] hover:text-white"}`}
-                    onClick={() => handleNavigation(item.path)}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {location.pathname === item.path && (
-                      <motion.div
-                        className="absolute inset-0 bg-[#333] rounded-full -z-10"
-                        layoutId="activeBackground"
-                        initial={false}
-                        transition={{
-                          type: "spring",
-                          stiffness: 300,
-                          damping: 30,
-                        }}
-                      />
-                    )}
-                    <item.icon className="h-6 w-6" />
-                  </motion.div>
-                </TooltipTrigger>
-                <TooltipContent side="left">
-                  <p>{item.name}</p>
-                </TooltipContent>
-              </Tooltip>
-            ))}
-          </motion.div>
-        </TooltipProvider>
-      </header>
-
-      <button
-        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className="md:hidden fixed top-6 right-6 z-50 bg-[#1c1c1c] p-3 rounded-full shadow-lg border border-[#2a2a2a]"
+      <motion.header
+        className="fixed top-5 right-5 sm:top-6 sm:right-8 z-50 flex items-center gap-5 sm:gap-7"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
       >
-        {mobileMenuOpen ? <X className="h-6 w-6 text-white cursor-pointer" /> : <Menu className="h-6 w-6 text-white cursor-pointer" />}
-      </button>
-
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            className="fixed inset-0 bg-black/90 z-40 flex flex-col items-center justify-center md:hidden cursor-pointer"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <motion.div
-              className="flex flex-col items-center space-y-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
+        {navItems.map((item) => {
+          const isActive = location.pathname === item.path
+          return (
+            <motion.button
+              key={item.name}
+              onClick={() => handleNavigation(item.path)}
+              className={`relative py-1 text-xs sm:text-sm md:text-base font-bold tracking-widest uppercase cursor-pointer transition-colors duration-200 select-none ${
+                isActive
+                  ? "text-zinc-900 dark:text-white"
+                  : "text-zinc-400 hover:text-zinc-900 dark:text-[#8b8b8b] dark:hover:text-white"
+              }`}
+              whileHover={{ y: -1 }}
+              whileTap={{ scale: 0.95 }}
             >
-              {navItems.map((item, index) => (
+              <span>{item.name}</span>
+              {isActive && (
                 <motion.div
-                  key={item.name}
-                  className={`flex items-center space-x-4 ${location.pathname === item.path ? "text-white" : "text-[#8b8b8b]"}`}
-                  onClick={() => handleNavigation(item.path)}
-                  whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: 1,
-                    y: 0,
-                    transition: { delay: 0.1 + index * 0.1 },
+                  className="absolute -bottom-0.5 left-0 right-0 h-[2px] bg-zinc-900 dark:bg-white rounded-full"
+                  layoutId="activeNavUnderline"
+                  transition={{
+                    type: "spring",
+                    stiffness: 380,
+                    damping: 30,
                   }}
-                >
-                  <item.icon className="h-6 w-6  hover:text-white" />
-                  <span className="text-xl font-medium  hover:text-white">{item.name}</span>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                />
+              )}
+            </motion.button>
+          )
+        })}
 
-
+        <motion.button
+          onClick={toggleTheme}
+          className="p-1.5 rounded-full text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white hover:bg-zinc-200/60 dark:hover:bg-zinc-800 transition-colors cursor-pointer select-none flex items-center justify-center"
+          whileHover={{ scale: 1.15 }}
+          whileTap={{ scale: 0.9 }}
+          aria-label="Toggle color theme"
+          title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+        >
+          {theme === "dark" ? (
+            <Sun className="w-4 h-4 sm:w-5 sm:h-5 text-white transition-transform duration-300" />
+          ) : (
+            <Moon className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-700 transition-transform duration-300" />
+          )}
+        </motion.button>
+      </motion.header>
 
       <AnimatePresence>
         {isNavigating && (
           <motion.div
-            className="fixed inset-0 bg-black/80 z-40"
+            className="fixed inset-0 bg-black/30 dark:bg-black/80 z-40 pointer-events-none"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -153,5 +113,6 @@ const HeaderNavigation = () => {
 }
 
 export default HeaderNavigation
+
 
 
