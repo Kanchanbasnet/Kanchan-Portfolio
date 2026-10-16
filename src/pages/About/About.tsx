@@ -1,6 +1,6 @@
 import { FileDown, FileText, Code } from 'lucide-react';
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import {
   DockerIcon,
   ExpressIcon,
@@ -81,7 +81,7 @@ const About = () => {
     },
   };
 
-  const skillItem = {
+  const skillItem: Variants = {
     hidden: { opacity: 0, scale: 0.8 },
     show: {
       opacity: 1,

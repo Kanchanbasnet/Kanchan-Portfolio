@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Home, Network, User, BookOpen, Mail, Menu, X } from "lucide-react"
+import { Home, Network, User, Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../components/ui/tooltip"
 import { useNavigate, useLocation } from "react-router-dom"
@@ -14,8 +14,6 @@ const HeaderNavigation = () => {
     { name: "Home", icon: Home, path: "/" },
     { name: "About", icon: User, path: "/about" },
     { name: "Projects", icon: Network, path: "/projects" },
-    { name: "Blogs", icon: BookOpen, path: "/blogs" },
-    { name: "Contact", icon: Mail, path: "mailto:kanchanbasnet.dev@gmail.com" },
   ]
 
   const handleNavigation = (path: string) => {

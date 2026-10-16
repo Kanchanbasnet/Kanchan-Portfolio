@@ -1,5 +1,5 @@
 import { Building2 } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 
 const experience = [
   {
@@ -37,7 +37,7 @@ const item = {
   },
 };
 
-const techItem = {
+const techItem: Variants = {
   hidden: { opacity: 0, scale: 0.8 },
   show: {
     opacity: 1,
