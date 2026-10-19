@@ -2,8 +2,8 @@ import { Helmet } from "react-helmet-async";
 
 const Seo = ({
   title = "Kanchan Basnet - Software Engineer",
-  description = "Backend developer skilled in Node.js, React.js, and TypeScript. Building reliable and efficient applications with clean, maintainable code.",
-  keywords = "Kanchan Basnet, Software Engineer, Node.js, React.js, TypeScript, Backend Developer, Portfolio",
+  description = "Software engineer who loves breaking things to understand how they work, finding patterns in chaos, and turning messes into something that makes sense.",
+  keywords = "Kanchan Basnet, Software Engineer, Portfolio, Developer",
   ogImage = "https://www.kanchanbasnet.com.np/default-faviconn.png",
   ogUrl = "https://www.kanchanbasnet.com.np/",
   pathName = "",

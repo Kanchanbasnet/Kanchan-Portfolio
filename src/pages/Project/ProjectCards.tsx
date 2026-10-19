@@ -40,7 +40,7 @@ const ProjectCards = () => {
           />
         </div>
 
-        <div className="p-6 sm:p-7 flex flex-col">
+        <div className="p-5 sm:p-7 flex flex-col">
           <h3 className="text-xl sm:text-2xl font-bold mb-2.5 text-zinc-900 dark:text-white tracking-tight transition-colors">
             {project.title}
           </h3>

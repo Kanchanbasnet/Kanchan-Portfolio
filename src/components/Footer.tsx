@@ -1,11 +1,10 @@
 import { motion } from "framer-motion"
-import { Mail } from "lucide-react"
-import { GithubIcon, LinkedInIcon } from "../assets/icons/icons"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 const Footer = () => {
   return (
     <motion.footer
-      className="fixed bottom-0 left-0 right-0 py-6 sm:py-8 flex items-center justify-center gap-6 sm:gap-8 z-40 select-none pointer-events-none"
+      className="fixed bottom-0 left-0 right-0 py-4 sm:py-6 flex items-center justify-center gap-6 sm:gap-8 z-40 select-none pointer-events-none"
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.5 }}
@@ -19,7 +18,7 @@ const Footer = () => {
         whileTap={{ scale: 0.95 }}
         aria-label="GitHub"
       >
-        <GithubIcon />
+        <Github className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.8} />
       </motion.a>
       <motion.a
         href="mailto:kanchanbasnet.dev@gmail.com"
@@ -39,11 +38,10 @@ const Footer = () => {
         whileTap={{ scale: 0.95 }}
         aria-label="LinkedIn"
       >
-        <LinkedInIcon />
+        <Linkedin className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.8} />
       </motion.a>
     </motion.footer>
   )
 }
 
 export default Footer
-

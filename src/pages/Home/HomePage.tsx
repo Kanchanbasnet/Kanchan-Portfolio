@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 import HeaderNavigation from "../../components/FooterNavigation"
 import Seo from "../../components/Seo"
 import Footer from "../../components/Footer"
@@ -10,13 +10,13 @@ const HomePage = () => {
     <div className="min-h-screen bg-white dark:bg-[#09090b] text-zinc-900 dark:text-white flex flex-col relative overflow-hidden font-['Outfit'] transition-colors duration-300">
       <Seo
         title="Kanchan Basnet - Software Engineer"
-        description="Software Engineer skilled in Node.js, React.js, and TypeScript. Building reliable and efficient applications with clean, maintainable code."
+        description="Software engineer who loves breaking things to understand how they work, finding patterns in chaos, and turning messes into something that makes sense."
         pathName=""
       />
 
       <HeaderNavigation />
 
-      <main className="flex-grow flex items-center justify-center px-6 sm:px-10 md:px-16 lg:px-20 py-20 pb-28">
+      <main className="flex-grow flex items-center justify-center px-4 sm:px-10 md:px-16 lg:px-20 py-20 pb-24 sm:pb-28">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
