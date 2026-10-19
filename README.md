@@ -1,7 +1,5 @@
-# Kanchan Basnet — Portfolio
+# My Portfolio
 
-Personal portfolio website built with React, TypeScript, and Vite. 
-
-🌐 **Live:** [kanchanbasnet.com.np](https://www.kanchanbasnet.com.np/)
+🌐 **Check out on:** [kanchanbasnet.com.np](https://www.kanchanbasnet.com.np/)
 
 
